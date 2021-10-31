@@ -1,7 +1,16 @@
 // express server
 const express = require('express');
+
+// connection to DB using sequelize
+const sequelize = require('./config/connection');
+
+// routes
+const routes = require('./routes');
+
+// define application 
 const app = express();
 const PORT = process.env.PORT || 3001;
+
 // middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
